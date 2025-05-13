@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Mini_MvcProject.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<AddDbFile>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("CarCollection")));
+   
 
 var app = builder.Build();
 
