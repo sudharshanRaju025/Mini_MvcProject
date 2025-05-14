@@ -1,0 +1,35 @@
+﻿
+@model List<Mini_MvcProject.Models.Entities.Car>
+
+<h1>Students</h1>
+
+<table class="table table-bordered table-striped table-primary">
+	<thread>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Model_Name</th>
+			<th>year</th>
+			<th>Country</th>
+			<th> </th>
+		</tr>
+	</thread>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.Id</td>
+				<td>@item.Name</td>
+				<td>@item.Model_Name</td>
+				<td>@item.year</td>
+				<td>@item.Country</td>
+				<td>
+					<a class="btn btn-primary" asp-controller="Mini_Project" asp-action="Edit" asp-route-Id="@item.Id" >Edit</a><br />
+				
+				</td>
+
+
+			</tr>
+		}
+	</tbody>
+</table>

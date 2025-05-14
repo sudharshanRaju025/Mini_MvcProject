@@ -10,7 +10,7 @@ namespace Mini_MvcProject.Data
 
         }
 
-        public DbSet<Car> Students { get; set; }
+        public DbSet<Car> Cars { get; set; }
         
     }
 }

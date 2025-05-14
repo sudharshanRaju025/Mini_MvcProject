@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AddDbFile>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("CarCollection")));
+options.UseSqlServer(builder.Configuration.GetConnectionString("Cars")));
    
 
 var app = builder.Build();
