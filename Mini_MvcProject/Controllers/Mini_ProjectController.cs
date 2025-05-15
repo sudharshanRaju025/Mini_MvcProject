@@ -7,6 +7,7 @@ using Mini_MvcProject.Models.Entities;
 
 namespace Mini_MvcProject.Controllers
 {
+
     public class Mini_ProjectController : Controller
     {
         private readonly AddDbFile dbContext;
